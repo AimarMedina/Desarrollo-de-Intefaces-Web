@@ -1,0 +1,39 @@
+.container {
+    display: grid;
+    height: 250px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: .5em;
+    gap: 1em;
+}
+.container div{
+    background-color: rgb(255, 245, 168);
+    position: relative;
+    border: 1px solid black;
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 15px;
+        width: 15px;
+        background-color: rgb(255, 255, 255);
+        top: -8.5px;
+        right: -8px;
+        transform: rotate(45deg);
+        border-bottom: 1px solid black;
+        z-index: 1 ;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 10px;
+        width: 10px;
+        background-color: rgb(0, 255, 157);
+        top: 0;
+        right: 0;
+        background-color: rgb(255, 241, 139);
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+    }
+}
