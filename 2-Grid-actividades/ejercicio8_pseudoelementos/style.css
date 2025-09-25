@@ -18,8 +18,8 @@ section>:first-child {
     margin-right: .3em;
 }
 
-.ie::after {
-    content: " .Ie";
+.ie::after,.chrome::after,.firefox::after {
+    content: " " attr(title);
     color: rgb(255, 81, 0);
 }
 
@@ -28,19 +28,17 @@ section>:first-child {
     margin-right: .3em;
 }
 
-.chrome::after {
-    content: " .Gc";
-    color: rgb(255, 81, 0);
-}
-
 .firefox::before {
     content: url(img/images/firefox.png);
     margin-right: .3em;
 }
 
-.firefox::after {
-    content: " .Ff";
-    color: rgb(255, 81, 0);
+h3::after,h3::before {
+    content:attr(title);
+    color: yellow;
+    background: red;
+    padding: 0 5px;
+    border-radius: 100%;
 }
 
 div {
