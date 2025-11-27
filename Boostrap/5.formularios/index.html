@@ -82,7 +82,7 @@
           </div>
         </div>
         <!--TABLA-->
-        <div class="col-md-6 align-self-center">
+        <div class="col-md-6 align-self-center table-responsive">
           <table class="table table-success table-bordered border-primary table-striped">
 
             <thead class="table-dark">
@@ -156,7 +156,7 @@
           <p class="display-1 text-center">SECCION</p>
         </div>
       </div>
-      <div class="row bg-secondary text-white mt-1">
+      <div class="row bg-secondary text-white mt-1 mb-1">
         <div class="col-md-4 ">
           <img src="img/logo.jpg" alt="logo" class="img-fluid bg-light mt-2"/>
           <p>
@@ -177,6 +177,71 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
+        </div>
+      </div>
+
+      <!-- CONTACTO -->
+      <div class="row bg-primary text-white">
+        <div class="col-12">
+          <p class="display-1 text-center">CONTACTO</p>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-2 mx-2">
+        <div class="col-md-6">
+          <form class="d-flex flex-column gap-2">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+              </div>
+              <div class="col-md-4">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido">
+              </div>
+              <div class="col-md-4">
+                <label for="username" class="form-label">Username</label>
+                <div class="input-group">
+                  <span class="input-group-text">@</span>
+                  <input type="text" class="form-control" id="username" name="username">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                  <label for="ciudad" class="form-label">Ciudad</label>
+                  <input type="text" class="form-control" id="ciudad" name="ciudad">
+                </div>
+                <div class="col-md-3">
+                  <label for="provincia" class="form-label">Provincia</label>
+                  <select class="form-select">
+                    <option value="">Álava</option>
+                    <option value="">Bizkaia</option>
+                    <option value="">Gipuzkoa</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="codigo" class="form-label">Codigo Postal</label>
+                  <input type="text" class="form-control" id="codigo" name="codigo">
+                </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Acepto terminos y condiciones</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input type="submit" class="btn btn-primary">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-4 mt-md-0 mt-4">
+          <p class="display-6 bg-primary text-white p-1 rounded">Contacta con nosotros</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum magnam fuga eos vero animi exercitationem possimus, veniam vel suscipit inventore, dolores id quo. At odio vitae velit exercitationem! Sint?</p>
         </div>
       </div>
 
