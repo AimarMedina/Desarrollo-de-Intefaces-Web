@@ -19,7 +19,7 @@ section>:first-child {
 }
 
 .ie::after,.chrome::after,.firefox::after {
-    content: " " attr(title);
+    content: attr(title);
     color: rgb(255, 81, 0);
 }
 
@@ -45,4 +45,32 @@ div {
     display: flex;
     border-bottom: .5px solid rgba(255, 255, 255, 0.661);
     margin: .2em;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.prueba{
+    border: none;
+}
+.prueba:hover{
+    border: 2px lightpink solid;
+}
+
+.prueba:focus,.prueba:active {
+        border: 2px rgb(255, 0, 38) solid;
+
+}
+
+.prueba2{
+    border: none;
+    box-sizing: border-box;
+}
+.prueba2:hover{
+    border: 2px lightpink solid;
+}
+
+.prueba2:focus, .prueba2:active {
+        border: 2px rgb(255, 0, 38) solid;
 }
