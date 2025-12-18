@@ -1,0 +1,93 @@
+@use 'sass:math';
+@use "sass:map";
+
+@function box-shadow($borderRadious){
+    @return math.div($borderRadious,2)
+};
+
+@function es-par($numero) {
+  @return $numero % 2 == 0;
+};
+
+@function colorColumna($numeroColumna){
+    @if(es-par($numeroColumna)){
+        @return map.get($coloresTable, "grisClaro");
+    } @else{
+        @return map.get($coloresTable, "grisOscuro");
+    }
+};
+
+@function anchoPorcentaje($numeroColumnas) {
+    @return $numeroColumnas*math.div(100%,8)
+};
+
+
+//Colores botones
+$coloresBtn: (
+    btn-error: #ff0000,
+    btn-warning: rgb(239, 241, 120),
+    btn-accepted: rgb(55, 138, 0),
+    btn-normal: rgb(0, 110, 255),
+);
+
+//Colores tabla
+$coloresTable: (
+    grisClaro: #ccc,
+    grisOscuro: #888
+);
+
+//Botones
+$borderRadious: .4rem;
+$buttonHoverShadow: box-shadow($borderRadious) box-shadow($borderRadious)  5px #888;
+
+.btn{
+    border-radius: $borderRadious;
+    border: none;
+    background: none;
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover{
+        box-shadow: $buttonHoverShadow;
+    }
+    &:active {
+        background-color: orange;
+        color: white;
+    }
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+}
+
+@each $nombre, $color in $coloresBtn {
+  .#{$nombre} {
+    background-color: $color;
+  }
+}
+
+table{
+    border-collapse: collapse;
+    td,th{
+        border: 1px solid;
+        padding: 5px;
+    }
+}
+@for $i from 1 through 11{
+    tbody td:nth-child(#{$i}){
+        background: colorColumna($i);
+    }
+}
+
+
+@for $i from 1 through  8{
+    .col-#{$i}{
+        width: anchoPorcentaje($i);
+        border: 1px solid;
+    }
+}
+

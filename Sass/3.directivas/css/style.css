@@ -1,0 +1,23 @@
+.btn-error {
+  background: linear-gradient(180deg, #ff0000 0%, rgb(193, 255, 166) 100%);
+}
+
+.btn-warning {
+  background: linear-gradient(180deg, rgb(239, 241, 120) 0%, rgb(193, 255, 166) 100%);
+}
+
+.btn-success {
+  background: linear-gradient(180deg, rgb(55, 138, 0) 0%, rgb(193, 255, 166) 100%);
+}
+
+.btn-normal {
+  background: linear-gradient(180deg, rgb(0, 110, 255) 0%, rgb(193, 255, 166) 100%);
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+/*# sourceMappingURL=style.css.map */

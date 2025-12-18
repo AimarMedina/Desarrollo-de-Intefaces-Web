@@ -1,0 +1,22 @@
+@use "./colores.scss" as c;
+@use "sass:map";
+
+@mixin btnGradient($startColor, $endColor){
+    background: linear-gradient(180deg, #{$startColor} 0%, #{$endColor} 100%);
+}
+
+
+@each $nombre, $color in c.$coloresBtn {
+    .btn-#{$nombre}{
+        @include btnGradient(#{$color}, rgb(193, 255, 166) );
+    }
+}
+
+.btn{
+    display: inline-block;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+
+

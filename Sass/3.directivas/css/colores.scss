@@ -1,0 +1,28 @@
+@use "sass:map";
+
+//Colores
+$colores: (
+    rojo: #ff0000,
+    amarillo: rgb(239, 241, 120),
+    verde: rgb(55, 138, 0),
+    azul: rgb(0, 110, 255),
+    grisClaro: #ccc,
+    grisOscuro: #888,
+    moradoRaro: rgb(155, 111, 145),
+    blanco: #fff,
+    grisMuyOscuro: #333,
+);
+
+//Colores tabla
+$coloresTable: (
+    grisClaro: map.get($colores, "grisClaro"),
+    grisOscuro: map.get($colores, "grisOscuro")
+);
+
+//Colores botones
+$coloresBtn: (
+    error: map.get($colores, "rojo"),
+    warning: map.get($colores, "amarillo"),
+    success: map.get($colores, "verde"),
+    normal: map.get($colores, "azul"),
+);
